@@ -1,0 +1,2 @@
+titolo="Aggiungere le preposizioni a, in, da";alternative="";
+testo="Oggi sono andato [...;da] un amico. Non abita lontano; sono andato [...;a] piedi. Abita [...;a] Monfalcone, [...;in] Viale S. Marco. Abbiamo parlato [...;a] lungo, poi siamo usciti di casa e siamo andati [...;in] Piazza [...;a] bere un caffè.<br><br>Mentre tornavamo [...;a] casa, abbiamo trovato un altro amico e abbiamo deciso di andare [...;al] cinema.";
