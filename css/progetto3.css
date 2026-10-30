@@ -1,4 +1,4 @@
-body {font-size:6pc;}
+body {font-size:3pc;}
 #main {position:relative;}
 #header {position:fixed; top:0;right:0;}
 #body {position:absolute; top:20px; width:100%;}
