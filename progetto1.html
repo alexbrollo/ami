@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset="UTF-8" http-equiv="content-type">
+  <title>progetto1</title>
+  <link href="./css/progetto1.css" type="text/css" rel="stylesheet"><script src="./js/jquery-3.7.1.js"></script>
+  <script src="./js/lettere.js"></script>
+  <!-- lettere.js carica una lista di coppie [conversione in latino, carattere bangali] in un variabile globale lettere -->
+  <script src="./js/progetto1.js"></script>
+  <!-- progetto1 attiva la routine di addestramento per il riconoscimento dei caratteri bengalesi -->
+</head><body>
+
+<h2>Gadget per riconoscimento caratteri bengalesi pro<span class=hid title="va">....</span> pro<span class=hid title="va">....</span></h1>
+<p>Premere "Vai!" per generare un carattere bengalese casuale nel box bengali.</p>
+<p>Se nel box bengali split è presente un insieme di caratteri bengalesi qualsiasi, la scelta casuale cadrà su uno dei caratteri presenti nel box.</p>
+<p>Premere il pulsante che si ritiene corrispondente al carattere. Il testo latinizzato comparirà nel box latin convert, e a fianco comparirà No! oppure Ok! in relazione alla concordanza. </p>
+<p>I pulsanti con testo rosso corrispondono alla variante ricombinante delle vocali.</p>
+
+bengali<br>
+<textarea id="bengali" class="txt"></textarea><span id="vai">&nbsp;&nbsp;&nbsp;Vai!</span><br>
+
+bengali splitted<br>
+<textarea id="split" class="txt"></textarea><br>
+
+latin converted<br>
+<textarea id="latin" class="txt"></textarea><span>&nbsp;&nbsp;&nbsp;</span><span id="res"></span>
+<div id="bottom-buttons" style="position: fixed; bottom: 0pt; right: 0pt;">
+	<!--<button id="kô" value="ক" onclick="alfa(this)">kô</button>
+	<button id="khô" value="খ" onclick="alfa(this)">khô</button>-->
+</div>
+</body></html>

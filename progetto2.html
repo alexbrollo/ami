@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset="UTF-8" http-equiv="content-type">
+  <title>progetto2</title>
+  <link href="./css/progetto1.css" type="text/css" rel="stylesheet"><script src="./js/jquery-3.7.1.js"></script>
+  <script src="./js/lettere.js"></script>
+  <!-- lettere.js carica una lista di coppie [conversione in latino, carattere bangali] in un variabile globale lettere -->
+  <script src="./js/progetto2.js"></script>
+  <!-- progetto1 attiva la routine di addestramento per il riconoscimento dei caratteri bengalesi -->
+</head><body>
+
+<h2>Gadget scrittura bengalese</h1>
+
+<p>I pulsanti con testo rosso corrispondono alla variante ricombinante delle vocali.</p>
+<br><br><br>
+bengali<br>
+<textarea id="bengali" class="txt"></textarea><br>
+
+bengali splitted<br>
+<textarea id="split" class="txt"></textarea><span id="vai">&nbsp;&nbsp;&nbsp;Split</span><br><br>
+
+latin character<br>
+<textarea id="latin" class="txt"></textarea><span>&nbsp;&nbsp;&nbsp;</span>
+<span id="res"></span>
+<div id="bottom-buttons" style="position: fixed; bottom: 0pt; right: 0pt;"><!--
+	<button id="kô" value="ক" onclick="alfa(this)">kô</button>
+	<button id="khô" value="খ" onclick="alfa(this)">khô</button>-->
+</div>
+</body></html>
