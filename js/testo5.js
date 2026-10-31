@@ -1,0 +1,4 @@
+titolo="INDICARE IL PARTICIPIO PASSATO DEL VERBO";
+alternative="";
+testo=" ACCENDERE: [........;ACCESO]<br>BERE: [........;BEVUTO]<br>CHIEDERE: [........;CHIESTO]<br>CHIUDERE: [........;CHIUSO]<br>CORRERE: [........;CORSO]<br>DECIDERE: [........;DECISO]<br>ESSERE: [........;STATO]<br>LEGGERE: [........;LETTO]<br>METTERE: [........;MESSO]<br>MORIRE: [........;MORTO]<br>PERDERE: [........;PERSO]<br>RIMANERE: [........;RIMASTO]<br>RIDERE: [........;RISO]<br>ROMPERE: [........;ROTTO]<br>SCENDERE: [........;SCESO]<br>SCRIVERE: [........;SCRITTO]<br>SORRIDERE: [........;SORRISO]<br>SPENDERE: [........;SPESO]<br>VEDERE: [........;VISTO]<br>VINCERE: [........;VINTO]<br>"; 
+elabora(titolo,alternative,testo);
