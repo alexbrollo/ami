@@ -1,4 +1,5 @@
-body {font-size:1.5em;}
+body  {font-size:1.5em;}
+input, button {font-size:100%;}
 #main {position:relative;}
 #header {position:fixed; top:0;right:0;}
 #body {position:absolute; top:20px; width:100%;}
