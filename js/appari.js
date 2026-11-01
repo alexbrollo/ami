@@ -32,7 +32,7 @@ $(document).ready(function() {$("#vai").click(function() {
 	var titolo="";
 	var alternative="";
 	var testo="";
-	var nomeTesto=$("#input").val();
+	var nomeTesto=$("#input").val().toLocaleLowerCase();
 	$("body script").remove();
 	var s=document.createElement("script");
 	s.src="./js/"+nomeTesto+".js";
