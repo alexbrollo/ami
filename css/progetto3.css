@@ -3,7 +3,7 @@ body {font-size:1.5em;}
 #header {position:fixed; top:0;right:0;}
 #body {position:absolute; top:20px; width:100%;}
 #footer {position:fixed; bottom:0; right:0;}
-.v0 {color:green; display:normal;}
-.v1 {color:red;display:none;}
+.v0 {color:red; display:normal;}
+.v1 {color:green;display:none;}
 #titolo {font-size:120%; font-weight:bold;}
 #alternative {font-weight:bold;}
