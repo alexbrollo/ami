@@ -18,8 +18,8 @@ function elabora(titolo,alternative,testo) {
 			testo=testo_split.join("");
 		}
 	}
-	$("#titolo p").text(titolo);
-	$("#alternative p").text(alternative);
+	$("#titolo p").html(titolo);
+	$("#alternative p").html(alternative);
 	$("#testo p").html(testo); 
 	
 	$(".alterna").click(function() {$(this).children().toggle();});
