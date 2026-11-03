@@ -19,5 +19,5 @@ testo="<table><tr><td>Accendere:</td><td> [........;acceso]</td><td></td></tr>"+
 "<tr><td>Sorridere:</td><td> [........;sorriso]</td><td></td></tr>"+
 "<tr><td>Spendere:</td><td> [........;speso]</td><td></td></tr>"+
 "<tr><td>Vedere:</td><td> [........;visto]</td><td></td></tr>"+
-"<tr><td>Vincere:</td><td> [........;vinto]</td><td></td></tr><>table>";
+"<tr><td>Vincere:</td><td> [........;vinto]</td><td></td></tr></table>";
 elabora(titolo,alternative,testo);
