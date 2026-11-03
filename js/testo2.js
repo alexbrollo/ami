@@ -1,3 +1,4 @@
-titolo="Aggiungere le preposizioni a, in, da";alternative="";
+titolo="Aggiungere le preposizioni a, in, da";
+alternative="Completa mentalmente i testi dove indicato dai puntini rossi. Poi clicca per verificare";
 testo="Oggi sono andato [...;da] un amico. Non abita lontano; sono andato [...;a] piedi. Abita [...;a] Monfalcone, [...;in] Viale S. Marco. Abbiamo parlato [...;a] lungo, poi siamo usciti di casa e siamo andati [...;in] Piazza [...;a] bere un caffè.<br><br>Mentre tornavamo [...;a] casa, abbiamo trovato un altro amico e abbiamo deciso di andare [...;al] cinema.";
 elabora(titolo,alternative,testo);
