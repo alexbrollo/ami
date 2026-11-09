@@ -8,3 +8,7 @@ input, button {font-size:100%;}
 .v1 {color:green;display:none;}
 #titolo {font-size:120%; font-weight:bold;margin-top:2em;}
 #alternative {font-weight:bold;}
+select {
+  font-size: 100%;
+  max-width: 100%;
+}
