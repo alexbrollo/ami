@@ -43,12 +43,23 @@ function elabora(titolo,alternative,testo) {
 function verifica(elemento) {
 	$elemento=$(elemento);
 	if ($elemento.attr("alt")==$elemento.val()) {
-		console.log("OK");
+		//$elemento.css("color", "green");
+		//elemento.setSelectionRange(0,0);
+		$testo=$elemento.val(); 
+		$elemento.replaceWith('<span class="green">'+$testo+"</span>")
 		}
+	else {
+		$elemento.css("color", "red");
+		elemento.setSelectionRange(0,0);
+		}
+		
 	}
+	
 
 $(document).ready(function() {
-	$("#input").val("");
+	var hash=URL.parse(document.URL)["hash"].substr(1,);
+	console.log(hash);
+	$("#input").val(hash);
 	$("#vai").click(function() {
 	var titolo="";
 	var alternative="";
