@@ -13,7 +13,7 @@ function elabora(titolo,alternative,testo) {
 		if (testo_split[i].indexOf("[!")==0) {
 			t=testo_split[i]; // console.log(t);
 			t=t.substr(2,t.length-3).split(";");
-			t='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
+			t='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)" onfocusout="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
 			testo_split[i]=t;
 			testo=testo_split.join("");
 			
