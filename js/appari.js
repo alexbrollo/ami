@@ -45,8 +45,10 @@ function verifica(elemento) {
 	if ($elemento.attr("alt").toLocaleLowerCase()==$elemento.val().toLocaleLowerCase()) {
 		//$elemento.css("color", "green");
 		//elemento.setSelectionRange(0,0);
-		$testo=$elemento.val(); 
-		$elemento.replaceWith('<span class="green">'+$testo+"</span>")
+		$parent=$elemento.parent()
+		$testo=$elemento.attr("alt"); 
+		$parent.children().remove();
+		$parent.append($('<span class="green">'+$testo+"</span>"));
 		}
 	else {
 		$elemento.css("color", "red");
