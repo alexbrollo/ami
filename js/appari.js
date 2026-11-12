@@ -42,7 +42,7 @@ function elabora(titolo,alternative,testo) {
 
 function verifica(elemento) {
 	$elemento=$(elemento);
-	if ($elemento.attr("alt")==$elemento.val()) {
+	if ($elemento.attr("alt").toLocaleLowerCase()==$elemento.val().toLocaleLowerCase()) {
 		//$elemento.css("color", "green");
 		//elemento.setSelectionRange(0,0);
 		$testo=$elemento.val(); 
