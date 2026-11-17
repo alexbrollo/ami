@@ -7,7 +7,15 @@ con la seguente sintassi:
 	
 */
 function elabora(titolo,alternative,testo) {
-
+	if ($("input[value='vis']").is(":checked")) 
+	{
+		console.log("visualizzazione"); 
+		testo=testo.replace(/\[!+/g,"[");
+	}
+	else {
+		console.log("digitazione");
+		testo=testo.replace(/\[!*/g,"[!");
+	}
 	testo_split=testo.split(/(\[.+?\])/);
 	for (i=0; i<testo_split.length;i+=1) {
 		if (testo_split[i].indexOf("[!")==0) {
