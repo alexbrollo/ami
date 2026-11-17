@@ -1,92 +1,72 @@
-/*
-la routine carica una variabile testo leggendo un file js
-con la seguente sintassi:
-	testo="stringa"
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <meta charset="UTF-8">
+  <meta content="text/html; http-equiv="content-type">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>progetto3</title>
+  <link href="./css/progetto3.css" type="text/css" rel="stylesheet"><script src="./js/jquery-3.7.1.js"></script>
+  <script src="./js/lettere.js"></script>
+  <!-- lettere.js carica una lista di coppie [conversione in latino, carattere bangali] in un variabile globale lettere -->
+  <script src="./js/appari.js"></script>
+  <!-- progetto1 attiva la routine di addestramento per il riconoscimento dei caratteri bengalesi -->
+</head><body>
+<div id="main">
+	<!--<div id="header"><input id="input" type="text" size="15"><button id="vai">Vai!</button>
+	</div>-->
+	<div id="header">
 
-	Stringa contiene elementi con la sintassi [primo elemento;secondo elemento] che diventano testi visualizzati alternativamente. All'avvio viene visualizzato testo1.js. 
-	
-*/
-function elabora(titolo,alternative,testo) {
-	if ($("input[value='vis']").is(":checked")) 
-	{
-		console.log("visualizzazione"); 
-		testo=testo.replace(/\[!+/g,"[");
-	}
-	else {
-		console.log("digitazione");
-		testo=testo.replace(/\[!*/g,"[!");
-	}
-	testo_split=testo.split(/(\[.+?\])/);
-	for (i=0; i<testo_split.length;i+=1) {
-		if (testo_split[i].indexOf("[!")==0) {
-			t=testo_split[i]; // console.log(t);
-			t=t.substr(2,t.length-3).split(";");
-			t='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)" onfocusout="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
-			testo_split[i]=t;
-			testo=testo_split.join("");
-			
-			}
-		else 
-		    if (testo_split[i].indexOf("[")==0) {
-				t=testo_split[i]; // console.log(t);
-				t=t.substr(1,t.length-2).split(";");
-				t='<span class=alterna><span class="v0">$1</span><span class="v1">$2</span></span>'.replace("$1",t[0]).replace("$2",t[1]);
-				testo_split[i]=t;
-				testo=testo_split.join("");
-				$("#titolo p").html(titolo);
-				$("#alternative p").html(alternative);
-				$("#testo p").html(testo); 
-				$(".alterna").click(function() {$(this).children().toggle();});
-			}
-	}
-	$("#titolo p").html(titolo);
-	$("#alternative p").html(alternative);
-	$("#testo p").html(testo); 
-	
-	$(".alterna").click(function() {$(this).children().toggle();});
-}
+  <label for="input">Scegli un testo per tema:</label>
 
-// carica un js contenente un testo prova e lo sostituisce a testo
+  <select id="input">
 
-function verifica(elemento) {
-	$elemento=$(elemento);
-	if ($elemento.attr("alt").toLocaleLowerCase()==$elemento.val().toLocaleLowerCase()) {
-		//$elemento.css("color", "green");
-		//elemento.setSelectionRange(0,0);
-		$parent=$elemento.parent()
-		$testo=$elemento.attr("alt"); 
-		$parent.children().remove();
-		$parent.append($('<span class="green">'+$testo+"</span>"));
-		}
-	else {
-		$elemento.css("color", "red");
-		elemento.setSelectionRange(0,0);
-		}
-		
-	}
+    <optgroup label="Leggere semplici sillabe">
+      <option value="testo8">
+        Testo 8 
+      </option>
+
+    </optgroup>
+
+    <optgroup label="Scegliere le vocali finali">
+      <option value="testo4">
+        Testo 4
+      </option>
+      <option value="testo12">
+        Testo 12
+      </option>
+    </optgroup>
+	<optgroup label="Preposizioni">
+		  <option value="testo2">
+			In, a da 1 
+		  </option>
+		  <option value="testo11">
+			In, a da 2 
+		  </option>
+	</optgroup>
+		<optgroup label="Dare il nome a immagini ">
+		  <option value="testo14">
+			Testo 14
+		  </option>
+	</optgroup>
+
 	
 
-$(document).ready(function() {
-	var hash=URL.parse(document.URL)["hash"].substr(1,);
-	console.log(hash);
-	$("#input").val(hash);
-	$("#vai").click(function() {
-	var titolo="";
-	var alternative="";
-	var testo="";
-	var nomeTesto="";
-	if ($("#input").val()!="") {
-		nomeTesto=$("#input").val().toLocaleLowerCase();
 
-	} else {
-		nomeTesto=URL.parse(document.URL)["hash"].substr(1,);
-		$("#input").val(nomeTesto);
-		$("this").click();
-	}
-	$("body script").remove();
-	
-	var s=document.createElement("script");
-	s.src="./js/"+nomeTesto+".js";
-	document.body.append(s);
-	});
-});
+  </select>
+<label for "vis">Vis.</label><input type="radio" name="tipo" value="vis" checked>
+	<label for "dig">Dig.</label><input type="radio" name="tipo" value="dig">
+  <button id="vai" type="button">Apri il testo</button>
+
+</div>
+	<div id="titolo">
+		<p></p>
+	</div>
+	<div id="alternative">
+		<p></p>
+	</div>
+	<div id="testo">
+		<p></p>
+	</div>
+</div>
+
+</body></html>
+<!-- primo test git -->
