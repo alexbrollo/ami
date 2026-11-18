@@ -1,4 +1,3 @@
-titolo="Inserire i verbi all'imperfetto o al passato prossimo e aggiungere le preposizioni"; 
-alternative="Completa mentalmente i testi con le vocali mancanti dove indicato dai puntini rossi. Poi clicca per verificare";
-testo="UNA GITA A TRIESTE<br><br>Oggi [io andare...;sono andato] [....;a] Trieste in treno. Mentre il treno [correre....;correva], [io vedere....;vedevo] il Carso, poi [io vedere....;vedevo] il mare. C'erano molte barche a vela, [loro muoversi...;si muovevano] lentamente. <br>[io arrivare...;Sono arrivato] [...;a] Trieste [....;alle] 10.";
+titolo="Inserire i verbi all'imperfetto (imp) o al passato prossimo (pp) e aggiungere le preposizioni"; alternative=""; 
+testo="UNA GITA A TRIESTE<br><br>Oggi [io andare (pp)...;sono andato] [....;a] Trieste in treno. Mentre il treno [correre (imp)....;correva], [io vedere (imp)....;vedevo] il Carso, poi [io vedere (imp)....;vedevo] il mare. C'erano molte barche a vela, [loro muoversi (imp)...;si muovevano] lentamente. <br>[io arrivare (pp)...;Sono arrivato] [...;a] Trieste [....;alle] 10.";
 elabora(titolo,alternative,testo);

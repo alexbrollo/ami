@@ -1,5 +1,5 @@
 titolo="INDICARE IL PARTICIPIO PASSATO DEL VERBO";
-alternative="Sostituisci mentalmente i puntini e i testi in rosso con il participio passato del verbo. Poi clicca per verificare";
+alternative="Verbi irregolari.";
 testo="<table border=1>"+
 "<tr><td><b>Infinito</b></td><td><b>Participio passato</b></td><td><b>Frase di esempio</b></td></tr>"+
 "<tr><td>Accendere:</td><td> [........;acceso]</td><td>[io;Ho acceso] la luce</td></tr>"+
