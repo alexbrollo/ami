@@ -13,18 +13,14 @@ function elabora(titolo,alternative,testo) {
 	testo_split=testo.split(/(\[.+?\])/);
 	for (i=0; i<testo_split.length;i+=1) {
 		if (testo_split[i].startsWith("[")) {
-			
+			t=testo_split[i].substr(1,testo_split[i].length-2).split(";");
 			if (dig) {
-				t=testo_split[i]; // console.log(t);
-				t=t.substr(2,t.length-3).split(";");
 				t='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)" onfocusout="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
 				testo_split[i]=t;
 				
 				
 				}
 			else  {
-					t=testo_split[i]; // console.log(t);
-					t=t.substr(1,t.length-2).split(";");
 					t='<span class=alterna><span class="v0">$1</span><span class="v1">$2</span></span>'.replace("$1",t[0]).replace("$2",t[1]);
 					testo_split[i]=t;
 
