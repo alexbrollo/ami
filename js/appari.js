@@ -7,43 +7,36 @@ con la seguente sintassi:
 	
 */
 function elabora(titolo,alternative,testo) {
-	if ($("input[value='vis']").is(":checked")) 
-	{
-		console.log("visualizzazione"); 
-		testo=testo.replace(/\[!+/g,"[");
-	}
-	else {
-		console.log("digitazione");
-		testo=testo.replace(/\[!*/g,"[!");
-	}
+	var t,testo_html,testo_split;
+	var dig=true;
+	if ($("input[value='vis']").is(":checked")) dig=false;
 	testo_split=testo.split(/(\[.+?\])/);
 	for (i=0; i<testo_split.length;i+=1) {
-		if (testo_split[i].indexOf("[!")==0) {
-			t=testo_split[i]; // console.log(t);
-			t=t.substr(2,t.length-3).split(";");
-			t='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)" onfocusout="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
-			testo_split[i]=t;
-			testo=testo_split.join("");
+		if (testo_split[i].startsWith("[")) {
 			
-			}
-		else 
-		    if (testo_split[i].indexOf("[")==0) {
+			if (dig) {
 				t=testo_split[i]; // console.log(t);
-				t=t.substr(1,t.length-2).split(";");
-				t='<span class=alterna><span class="v0">$1</span><span class="v1">$2</span></span>'.replace("$1",t[0]).replace("$2",t[1]);
+				t=t.substr(2,t.length-3).split(";");
+				t='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)" onfocusout="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
 				testo_split[i]=t;
-				testo=testo_split.join("");
-				$("#titolo p").html(titolo);
-				$("#alternative p").html(alternative);
-				$("#testo p").html(testo); 
-				$(".alterna").click(function() {$(this).children().toggle();});
-			}
+				
+				
+				}
+			else  {
+					t=testo_split[i]; // console.log(t);
+					t=t.substr(1,t.length-2).split(";");
+					t='<span class=alterna><span class="v0">$1</span><span class="v1">$2</span></span>'.replace("$1",t[0]).replace("$2",t[1]);
+					testo_split[i]=t;
+
+				}
+		}
 	}
+	testo_html=testo_split.join("");
 	$("#titolo p").html(titolo);
 	$("#alternative p").html(alternative);
-	$("#testo p").html(testo); 
-	
+	$("#testo p").html(testo_html); 
 	$(".alterna").click(function() {$(this).children().toggle();});
+	
 }
 
 // carica un js contenente un testo prova e lo sostituisce a testo
