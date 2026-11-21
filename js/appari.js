@@ -7,7 +7,7 @@ con la seguente sintassi:
 	
 */
 function elabora(titolo,alternative,testo) {
-	var t,testo_html,testo_split;
+	var t,t12,testo_html,testo_split;
 	var dig=true;
 	if ($("input[value='vis']").is(":checked")) dig=false;
 	testo_split=testo.split(/(\[.+?\])/);
@@ -15,14 +15,14 @@ function elabora(titolo,alternative,testo) {
 		if (testo_split[i].startsWith("[")) {
 			t=testo_split[i].substr(1,testo_split[i].length-2).split(";");
 			if (dig) {
-				t='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)" onfocusout="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
-				testo_split[i]=t;
+				t12='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)" onfocusout="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
+				testo_split[i]=t12;
 				
 				
 				}
 			else  {
-					t='<span class=alterna><span class="v0">$1</span><span class="v1">$2</span></span>'.replace("$1",t[0]).replace("$2",t[1]);
-					testo_split[i]=t;
+					t12='<span class=alterna><span class="v0">$1</span><span class="v1">$2</span></span>'.replace("$1",t[0]).replace("$2",t[1]);
+					testo_split[i]=t12;
 
 				}
 		}
