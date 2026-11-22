@@ -13,3 +13,5 @@ select {
   max-width: 100%;
 }
 .green {color:green;}
+.table1 {border-collapse:collapse;}
+.table1 td {border:1px solid gray; min-width:10vw;}
