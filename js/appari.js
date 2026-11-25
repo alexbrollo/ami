@@ -54,6 +54,10 @@ function verifica(elemento) {
 		
 	}
 	
+function maptest(el) {
+	$("#work span").text(el.alt);};
+	console.log("js caricato");
+	}
 
 $(document).ready(function() {
 	var hash=URL.parse(document.URL)["hash"].substr(1,);
@@ -79,3 +83,4 @@ $(document).ready(function() {
 	document.body.append(s);
 	});
 });
+
