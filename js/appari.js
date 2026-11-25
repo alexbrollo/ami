@@ -55,7 +55,7 @@ function verifica(elemento) {
 	}
 	
 function maptest(el) {
-	$("#work span").text(el.alt);};
+	$("#work span").text(el.alt);
 	console.log("js caricato");
 	}
 
