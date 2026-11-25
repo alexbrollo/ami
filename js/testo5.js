@@ -1,7 +1,7 @@
-titolo="INDICARE IL PARTICIPIO PASSATO DEL VERBO";
+titolo="Il passato prossimo";
 alternative="Verbi irregolari.";
-testo="<table border=1>"+
-"<tr><td><b>Infinito</b></td><td><b>Participio passato</b></td><td><b>Frase di esempio</b></td></tr>"+
+testo="Il passato prossimo dei verbi si ottiene con il presente di essere/avere + participio passato del verbo.<br><br><table border=1><tr><td colspan=3 align=center>Ripasso di essere e avere</td><tr><td></td><td><b>essere</b></td><td><b>avere</b></td><tr><td><b>io</b></td><td>[...;sono]</td><td>[...;ho]</td></tr><tr><td><b>tu</b></td><td>[...;sei]</td><td>[...;hai]</td></tr><tr><td><b>lui/lei</b></td><td>[...;è]</td><td>[...;hai]</td></tr><tr><td><b>noi</b></td><td>[...;siamo]</td><td>[...;abbiamo]</td></tr><tr><td><b>voi</b></td><td>[...;siete]</td><td>[...;avete]</td></tr><tr><td><b>loro</b></td><td>[...;sono]</td><td>[...;hanno]</td></tr></table><br><br>"+
+"<table border=1><tr><td><b>Infinito</b></td><td><b>Participio passato</b></td><td><b>Frase di esempio di passato prossimo</b></td></tr>"+
 "<tr><td>Accendere:</td><td> [........;acceso]</td><td>[io;Ho acceso] la luce</td></tr>"+
 "<tr><td>Bere:</td><td> [........;bevuto]</td><td>[tu;Hai bevuto] un caffè</td></tr>"+
 "<tr><td>Chiedere:</td><td> [........;chiesto]</td><td>[voi;Avete chiesto] un'informazione</td></tr>"+
