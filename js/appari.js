@@ -6,6 +6,7 @@ con la seguente sintassi:
 	Stringa contiene elementi con la sintassi [primo elemento;secondo elemento] che diventano testi visualizzati alternativamente. All'avvio viene visualizzato testo1.js. 
 	
 */
+var italiano, bengalese;
 function elabora(titolo,alternative,testo) {
 	var t,t12,testo_html,testo_split;
 	var dig=true;
@@ -55,9 +56,16 @@ function verifica(elemento) {
 	}
 	
 function maptest(el) {
-	$("#work span").text(el.alt);
-	console.log("js caricato");
+	italiano=el.title;
+	bengalese=el.alt;
+	$("#work span").text(italiano);
 	}
+
+function alterna(el) {
+	if ($(el).text()==italiano) {$(el).text(bengalese);}
+	else {$(el).text(italiano);}
+}
+
 
 $(document).ready(function() {
 	var hash=URL.parse(document.URL)["hash"].substr(1,);
@@ -83,4 +91,3 @@ $(document).ready(function() {
 	document.body.append(s);
 	});
 });
-
