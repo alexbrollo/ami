@@ -64,6 +64,8 @@ function maptest(el) {
 function alterna(el) {
 	if ($(el).text()==italiano) {$(el).text(bengalese).css("color","red");}
 	else {$(el).text(italiano).css("color","black");}
+}
+
 
 $(document).ready(function() {
 	var hash=URL.parse(document.URL)["hash"].substr(1,);
