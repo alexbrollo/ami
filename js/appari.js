@@ -18,8 +18,6 @@ function elabora(titolo,alternative,testo) {
 			if (dig) {
 				t12='<span class="input"><input type="text" placeholder="$1" alt="$2" size="$3" ondblclick="verifica(this)" onfocusout="verifica(this)"></span>'.replace("$1",t[0]).replace("$2",t[1]).replace("$3",t[1].length);
 				testo_split[i]=t12;
-				
-				
 				}
 			else  {
 					t12='<span class=alterna><span class="v0">$1</span><span class="v1">$2</span></span>'.replace("$1",t[0]).replace("$2",t[1]);
@@ -78,14 +76,12 @@ $(document).ready(function() {
 	var nomeTesto="";
 	if ($("#input").val()!="") {
 		nomeTesto=$("#input").val().toLocaleLowerCase();
-
 	} else {
 		nomeTesto=URL.parse(document.URL)["hash"].substr(1,);
 		$("#input").val(nomeTesto);
 		$("this").click();
 	}
-	$("body script").remove();
-	
+	$("body script").remove();	
 	var s=document.createElement("script");
 	s.src="./js/"+nomeTesto+".js";
 	document.body.append(s);
