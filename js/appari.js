@@ -56,16 +56,14 @@ function verifica(elemento) {
 	}
 	
 function maptest(el) {
-	italiano=el.title;
-	bengalese=el.alt;
-	$("#work span").text(italiano);
+	italiano=el.alt;
+	bengalese=el.title;
+	$("#work span").text(bengalese).css("color","red");
 	}
 
 function alterna(el) {
-	if ($(el).text()==italiano) {$(el).text(bengalese);}
-	else {$(el).text(italiano);}
-}
-
+	if ($(el).text()==italiano) {$(el).text(bengalese).css("color","red");}
+	else {$(el).text(italiano).css("color","black");}
 
 $(document).ready(function() {
 	var hash=URL.parse(document.URL)["hash"].substr(1,);
